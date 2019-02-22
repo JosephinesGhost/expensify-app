@@ -14,6 +14,7 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
+    "express": "^4.16.4",
     "fsevents": "^1.2.7",
     "live": "^0.1.25-beta.0",
     "moment": "^2.23.0",
@@ -53,7 +54,9 @@
     "build": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server --mode development",
-    "test": "jest --config=jest.config.json --watchAll"
+    "test": "jest --config=jest.config.json --watchAll",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build:prod"
   },
   "author": "Flavia",
   "license": "ISC"
